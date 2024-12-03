@@ -57,7 +57,21 @@
 > There have been many nightmare stories of people who forgot to turn a service off and have been charged thousands of dollars. **Thus, we ask that you continue with this in mind and at your own discretion**.
 
 ## Required Coding Files
-**Description**: Below you will find all the files we will be using for this demo. These files contain the frontend (HTML), backend (Javascript), and our server 
+**Description**: Below you will find all the files we will be using for this demo. These files contain the frontend (HTML), backend (Javascript), and our server (server.js) code. For our demo, we will only be connecting to a AWS S3 Bucket we create. For the other services we use (SQS, SNS, and Lambda), we will be manually creating a workflow directly from the AWS platform. Let's break down what are files are doing below.
+
+**Folder Structure** <br/>
+- Front <br/>
+    - index.html (Upload File UI) <br/>
+    - style.css (basic CSS Styling) <br/>
+    - script.js (upload button functionality - send form data (image) to our server) <br/>
+- Back <br/>
+    - uploads (temporary folder that will store images before they are sent to your AWS S3 Bucket)
+    - server.js (sets up an Express server that handles file uploads from a client, temporarily stores the files on the server using Multer, and then uploads them to an AWS S3 bucket)
+ 
+**Required Steps**
+**Description**: Follow the steps below to **set up your frontend/backend/server** to begin working with **AWS**.
+1. Download the **AWS Code** Folder from this Repository, and open it up in your preferred **Code Editor**. Personally, I would recommend **Visual Studio Code** [here](https://code.visualstudio.com/download).
+2. After you have the **AWS Code** in your Code Editor, review the files code. Then, **open your systems terminal**. Go to the directory of where you saved the **AWS Code** folder, so when you enter the command **ls**, you see all the folders and files of 
 
 ## Create IAM User
 **Description**: We will now be creating an AWS IAM User, which is an identity in an AWS account that has the permission to interact with AWS resources. In other words, in order for a user to interact with AWS services (S3, SQS, SNS, Lambda, etc.), on the AWS platform or via your local code, you need an IAM role.
