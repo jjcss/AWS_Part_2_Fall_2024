@@ -23,7 +23,7 @@
     - [Add SNS ARN to Lambda Function](#Add-SNS-ARN-to-Lambda-Function)
     - [Run Workflow](#Run-Workflow)
     - [The End](#The-End)
-- [Continue Learning About React](#Continue-Learning-About-React)
+- [Continue Learning About AWS](#Continue-Learning-About-AWS)
 
 # Hands-On AWS (2/2) Workshop 
 
