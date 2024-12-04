@@ -106,8 +106,39 @@
 4. Next, click the **Choose File** button and select a file you want to upload into your S3 Bucket. After you have selected a file, click the **Upload** button. Then, head over to your S3 Bucket that you've created and check if the file you have uploaded is there. If you've connected everything correctly, you should have a new file there.
 5. You have now successfully connected AWS with your S3 bucket and have made sure it works with your Codestack. You have created a simple workflow of adding files from your website and storing them into S3. Congrats!
 
-## ...
-**Description**: Now
+## IAM Role Creation
+**Description**: In order to continue, we will have to create an IAM Role (not user) that will allow us to interact directly in AWS with other services like Lambda.
+
+1. To start out, first go to the AWS Platform and in the search bar search for **IAM** and select the first option. Then, in the left table of options, click on **Roles**. Then click on the **Create Role** orange button.
+2. Make sure the **AWS Service** option is selected under **Trusted Entity Type** and under **Use Case --> Service or use case** make sure you select **Lambda**. Then click the **Next** button.
+3. For the **Policies Permission** make sure you select these three policies: **AmazonS3FullAccess, AmazonSNSFullAccess, and AWSLambda_FullAccess**. Then click the **Next** button.
+4. Here, enter a **Role Name** of your choice and a **description** of your choice. Finally, click the **Create Role** button. You have now created a IAM Role that we will use in our Lambda function creation.
+
+## Setup Lambda Function
+**Description**: Now we will connect a Lambda function to our process that will trigger when a file is uploaded to our S3 Bucket and then send a SNS notification to your email that tells you that a file was just uploaded into your S3 Bucket. For this we will need to create a Lambda function with some code, and inside of the Lambda function we have to create an S3 Trigger event (when the file is uploaded into the S3 Bucket) that will activate our SNS notification system that will send a custom email about a file being uploaded to your desired email. But first, we have to create the Lambda function.
+
+1. To create a Lambda function in AWS, first go to the AWS Platform and in the search bar search for **Lambda** and select the first option.
+2. Click the **Create a Function** orange button. Make sure **Author From Scratch** is selected. Enter a **Function Name**. I will name mine **ProcessS3FileUpload**. Under **Runtime** select **Node.js 18.x** (but you can choose other languages, but for this demo we will write in Javascript). Then, click the **Change Default execution role** dropdown, and select the **Use an existing role** option. Under **Existing Role** select the Role you created in the previous step. Finally, click the **Create Function** button.
+3. You have now created a Lambda function. You should see a **Code | Test | Monitor | Configuration | Aliases | Versions** horizontal line of options. Make sure you are in the **Code Option. For now, we will leave our code blank.
+
+## S3 Trigger
+**Description**: Now we will create an S3 trigger within our Lamda function we have created in the previous step. This S3 Trigger will allow us to activate our Lambda function whenever a file is uploaded into our S3 Bucket. 
+
+1. To start, inside of the Lambda function you have already created, locate and click the **+ Add Trigger** Button. Under **Trigger Configuration** search for **S3** and select the only option given. Under **Bucket**, select the bucket you have already created.
+2. For **Event Types** make sure **All object create events** is selected. Finally, click the **Add** Button. In your Lambda function, you should now see a connection to your S3 Bucket. Basically, we have created a workflow that whenever a file is uploaded into our S3 Bucket, it will trigger whatever code our Lambda Function has. Our Function is currently empty.
+
+## Lambda Function Code
+**Description**: Now we will enter the Lambda function code that will allow us to activate our Lambda function (whenever is file is uploaded).
+
+1. ..
+
+## SNS Creation
+**Description**: Now we will create an SNS topic name that will allow us to send a custom email that will let us know that a file was recently uploaded in our S3 bucket.
+
+1. To start, first go to the AWS Platform and in the search bar search for **SNS** and select the first option. Then, under **Create Topic** enter a topic name and then click **Next step**.
+2. Make sure the **Standard** option is selected. Give a name to your topic if you haven't already. Then click **Create topic**.
+3. Then, click on **Create subscription**, and for **Protocol** make sure you select **Email. For **Endpoint** enter the desired email you want to receive a notification for. Also, make sure you keep track of your **Topic ARN** as we will be using it in our Lambda Function code. Then, click **Create subscription**. We are basically subscribing to the SNS Topic we've just created.
+4. Lastly, once you've created a subscription for your SNS Topic, you will receive an email on the email you selected in the subscription, asking yout to confirm the subscription. Make sure you confirm.
 
     
 ## The End
