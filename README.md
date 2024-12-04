@@ -162,6 +162,8 @@
 2. Then, go to your S3 Bucket and check if that file you uploaded is in your S3 bucket now.
 3. If it is, go to your email application and check if you received an email notification saying that a file was uploaded into your S3 Bucket. Double check if the **Bucket Name and File Name** are the same.
 4. If everything is connected perfectly, you have successfully created a simple Node JS/AWS real-life scenario workflow.
+
+> **Note**: Personally, I will be deleting all the Lambda/SNS/S3 Buckets I've created as I will no longer be using them. I recommend you do the same in case any charges are incurred to your card because one of these services was accidentally left on, etc. - Leandro G.
     
 ## The End
 **Summary**: Congratulations on learning how to connect a **Node JS** project to a AWS S3 Bucket, with AWS Lambda & SNS, in one workflow. Read below for more AWS Resources.
