@@ -84,7 +84,7 @@
 
 1. Go back to the AWS IAM Panel and on the left side table options, click on the **Users** option.
 2. Click on the **name of the user** you have just created.
-3. You should now see a horizontal row with these options **Permissions | Groups | Tags | Security credentials | Access Advisor**. Click on **Security Credentials**. Scroll down until you see the **Access Keys** section, and click on **Create Access Key**. Select the **local code** option and then click **next.
+3. You should now see a horizontal row with these options **Permissions | Groups | Tags | Security credentials | Access Advisor**. Click on **Security Credentials**. Scroll down until you see the **Access Keys** section, and click on **Create Access Key**. Select the **local code** option and then click **next**.
 4. Finally, leave everything else as it is and click on **create access key**
 5. Make sure you jot down what your **Access Key** and **Secret Access Key**. We have now created an Access Key for the IAM User we've created. We will use this in our code files to connect our code with AWS.
 
