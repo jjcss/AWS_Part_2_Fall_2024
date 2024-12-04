@@ -128,9 +128,11 @@
 2. For **Event Types** make sure **All object create events** is selected. Finally, click the **Add** Button. In your Lambda function, you should now see a connection to your S3 Bucket. Basically, we have created a workflow that whenever a file is uploaded into our S3 Bucket, it will trigger whatever code our Lambda Function has. Our Function is currently empty.
 
 ## Lambda Function Code
-**Description**: Now we will enter the Lambda function code that will allow us to activate our Lambda function (whenever is file is uploaded).
+**Description**: Now we will enter the Lambda function code that will allow us to activate our Lambda function (whenever a file is uploaded into our S3 Bucket).
 
-1. ..
+1. To start out, go back to the Lambda Function we have already created and in the **code** section paste the code found in the file named, **index.js** in the **Lambda** Folder, to your **index.js** file in your Lambda function. Make sure your files name is **index.js**.
+2. 
+
 
 ## SNS Creation
 **Description**: Now we will create an SNS topic name that will allow us to send a custom email that will let us know that a file was recently uploaded in our S3 bucket.
@@ -140,6 +142,8 @@
 3. Then, click on **Create subscription**, and for **Protocol** make sure you select **Email. For **Endpoint** enter the desired email you want to receive a notification for. Also, make sure you keep track of your **Topic ARN** as we will be using it in our Lambda Function code. Then, click **Create subscription**. We are basically subscribing to the SNS Topic we've just created.
 4. Lastly, once you've created a subscription for your SNS Topic, you will receive an email on the email you selected in the subscription, asking yout to confirm the subscription. Make sure you confirm.
 
+## Add SNS ARN to Lambda Function
+**Description**: 
     
 ## The End
 **Summary**: Congratulations on learning how to connect a **React** project to a backend, and learning how to use the **CRUD** method. We hope you left this meeting with a better understanding of React and how to use **MySQL** as a backend, along with **MySQL Workbench**. Feel free to look at the resources we've compiled below, which includes
