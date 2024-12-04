@@ -28,19 +28,20 @@
 # Hands-On AWS (2/2) Workshop 
 
 **Date:** Wednesday, December 4th, 2024 <br>
-**Description**: In this workshop students will learn how to implement AWS services like S3 Buckets, SQS, Lambda Functions, SNS, and possibly a PostgresQL database with Python, which is a high-level programming language (or React) This will be the second part of a 2 part series. <br>
+**Description**: In this workshop students will learn how to implement AWS services like S3 Buckets, Lambda Functions, SNS, and possibly a PostgresQL database with Python, which is a high-level programming language (or React) This will be the second part of a 2 part series. <br>
 **Workshop Youtube Video**: [click here - tbd]() <br>
 **Workshop Google Slides**: [click here - tbd]() <br>
+**AWS Part 1 Workshop Video/Slides**: [click here](https://www.youtube.com/watch?v=Wvz3KmUXlkY&t=338s&ab_channel=ComputerScienceSocietyatCUNYJohnJay) <br>
 
 ---
 
 ## Introduction
-**Description**: We will be going over how to implement AWS S3, Lambda, SQS, and SNS in a real-world scenario. By real-world scenario, what we mean is connecting our AWS account and its services to our website, which we will be hosting locally. This will require us to create a AWS Account, and you to follow all steps detailed below.
+**Description**: We will be going over how to implement AWS S3, Lambda, and SNS in a real-world scenario. By real-world scenario, what we mean is connecting our AWS account and its services to our website, which we will be hosting locally. This will require us to create a AWS Account, and you to follow all steps detailed below. Our Workflow will consist of creating a web application, connecting it to a server, then connecting it to an AWS S3 Bucket and using the file upload to trigger a Lambda function that will activate a SNS notification that will send an email telling us that a file was uploaded into the S3 Bucket. 
 
 ---
 
 ## Pre Requisites
-**Description**: ...
+**Description**: There aren't really any pre-requisites as we'll be going over a basic workflow using the stated AWS services stated above. You will have the steps below to follow along or do on your own time, as well as a video recording of the session. However, if you are not familiar with Html/CSS/Javascript/Node JS/Express, the frontend/server part of the code will be a bit confusing so I would recommend you review those files. We will quickly skim over the coding files in the steps below.
 
 ---
 
@@ -167,14 +168,10 @@
 
 ---
 
-# Continue Learning About React
-- [11-Hour React Free Course](https://scrimba.com/learn/learnreact)
-- [React Website: Learn more](https://reactjs.org/community/courses.html)
-- [React Youtube Course](https://www.youtube.com/watch?v=bMknfKXIFA8&t=2154s)
-- [CRUD Method](https://www.freecodecamp.org/news/crud-operations-explained/)
-- [Vite](https://vitejs.dev/guide/)
-- [MySQL Workbench Installation](https://dev.mysql.com/downloads/workbench/)
-
-
+# Continue Learning About AWS
+- [AWS S3](https://aws.amazon.com/s3/)
+- [AWS Lambda](https://aws.amazon.com/lambda/)
+- [AWS SNS](https://aws.amazon.com/sns/)
+- [More AWS](https://aws.amazon.com/about-aws/)
 
 > For visual learners, we'd recommend Youtube videos.
