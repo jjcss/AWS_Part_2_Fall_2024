@@ -33,12 +33,7 @@
 ---
 
 ## Pre Requisites
-            - Finally, to begin coding, you will need to open up your React project on a Coding Editor. We highly recommend you use and download [Visual Studio Code](https://code.visualstudio.com/download) as a coding editor. Once you selected a coding editor, go to where you downloaded/saved your React project and open it up on your editor. That's it. Happy coding!
-
-> Note: Using Vite to install React will save you much more time, compared to create-react-app.
-> **Resources**:
-> Video on installing [React on Mac](https://www.youtube.com/watch?v=2oA9d93T9Aw)
-> Install React [Article](https://www.knowledgehut.com/blog/web-development/install-react-on-mac)
+**Description**: ...
 
 ---
 
