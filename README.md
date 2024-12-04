@@ -8,17 +8,13 @@
 ## Table of Contents
 - [Introduction](#Introduction)
 - [Pre Requisites](#Pre-Requisites)
-- [React Demo](#React-Demo)
+- [AWS Demo](#AWS-Demo)
     - [Pre-Demo](#Pre-Demo)
-    - [Review Code Template](#Review-Code-Template)
-    - [Creating our Backend Server](#Creating-our-Backend-Server)
-    - [Installing MySQL + MySQL Workbench](#Installing-MySQL-+-MySQL-Workbench)
-    - [Create MySQL Workbench Database](#Create-MySQL-Workbench-Database)
-    - [Connect MySQL Database to your React Project](#Connect-MySQL-Database-to-your-React-Project)
-    - [C - Create Data](#C---Create-Data)
-    - [R - Read Data](#R---Read-Data)
-    - [U - Update Data](#U---Update-Data)
-    - [D - Delete Data](#D---Delete-Data)
+    - [Required Coding Files](#Required-Coding-Files)
+    - [Create IAM User](#Create-IAM-User)
+    - [Create IAM User Access Key](#Create-IAM-User-Access-Key)
+    - [S3 Bucket Creation](#S3-Bucket-Creation)
+    - [AWS Info Input Into Our Code](#AWS-Info-Input-Into-Our-Code)
     - [The End](#The-End)
 - [Continue Learning About React](#Continue-Learning-About-React)
 
@@ -30,7 +26,6 @@
 **Workshop Google Slides**: [click here - tbd]() <br>
 
 ---
-
 
 ## Introduction
 **Description**: We will be going over how to implement AWS S3, Lambda, SQS, and SNS in a real-world scenario. By real-world scenario, what we mean is connecting our AWS account and its services to our website, which we will be hosting locally. This will require us to create a AWS Account, and you to follow all steps detailed below.
@@ -100,7 +95,7 @@
 
 > Note: Make sure you keep your **Access Key** and **Secret Access Key** private. Do not share it with **anyone**.
     
-## S3 (AWS) Bucket Creation
+## S3 Bucket Creation
 **Description**: Now we will create an S3 bucket, which we will use to store any files we upload directly from our website. Although, you'll also be able to upload files directly via the AWS S3 platform. AWS S3 accepts many different file types.
 
 1. To create an S3 Bucket, first go to the AWS Platform and in the search bar search up **S3** and click the first option that shows up.
@@ -113,7 +108,7 @@
 1. Go back to your **code editor** and locate your **server.js** file. Then, locate the **accessKey, secretAccessKey, bucketRegion, and bucketName** variables in the file. The variables will be right after each other. Right now the variables are set to empty strings. Thus, enter your relevant information into each string as it is in the AWS Platform. This is the only additional code we will add.
 2. Now, let's test if we have completely connected AWS to our server. Make sure your server is running (node server.js). Go to your **index.html** file and **live preview** your frontend code (second click and select the **Open with Live Server** option. You may need to download the **Live Server** extension in Visual Studio Code if you haven't already. Then, you'll be redirected to a webpage with **AWS Demo: File Upload** as the title.
 3. Next, click the **Choose File** button and select a file you want to upload into your S3 Bucket. After you have selected a file, click the **Upload** button. Then, head over to your S3 Bucket that you've created and check if the file you have uploaded is there. If you've connected everything correctly, you should have a new file there.
-4. You have now successfully connected AWS with your S3 bucket and have made sure it works with your Codestack. Congrats!
+4. You have now successfully connected AWS with your S3 bucket and have made sure it works with your Codestack. You have created a simple workflow of adding files from your website and storing them into S3. Congrats!
 
 ## ...
 **Description**: Now
