@@ -127,7 +127,7 @@
 
 1. To create a Lambda function in AWS, first go to the AWS Platform and in the search bar search for **Lambda** and select the first option.
 2. Click the **Create a Function** orange button. Make sure **Author From Scratch** is selected. Enter a **Function Name**. I will name mine **ProcessS3FileUpload**. Under **Runtime** select **Node.js 18.x** (but you can choose other languages, but for this demo we will write in Javascript). Then, click the **Change Default execution role** dropdown, and select the **Use an existing role** option. Under **Existing Role** select the Role you created in the previous step. Finally, click the **Create Function** button.
-3. You have now created a Lambda function. You should see a **Code | Test | Monitor | Configuration | Aliases | Versions** horizontal line of options. Make sure you are in the **Code Option. For now, we will leave our code blank.
+3. You have now created a Lambda function. You should see a **Code | Test | Monitor | Configuration | Aliases | Versions** horizontal line of options. Make sure you are in the **Code** Option. For now, we will leave our code blank.
 
 ## S3 Trigger
 **Description**: Now we will create an S3 trigger within our Lamda function we have created in the previous step. This S3 Trigger will allow us to activate our Lambda function whenever a file is uploaded into our S3 Bucket. 
