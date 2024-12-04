@@ -15,6 +15,13 @@
     - [Create IAM User Access Key](#Create-IAM-User-Access-Key)
     - [S3 Bucket Creation](#S3-Bucket-Creation)
     - [AWS Info Input Into Our Code](#AWS-Info-Input-Into-Our-Code)
+    - [IAM Role Creation](#IAM-Role-Creation)
+    - [Setup Lambda Function](#Setup-Lambda-Function)
+    - [S3 Trigger](#S3-Trigger)
+    - [Lambda Function Code](#Lambda-Function-Code)
+    - [SNS Creation](#SNS-Creation)
+    - [Add SNS ARN to Lambda Function](#Add-SNS-ARN-to-Lambda-Function)
+    - [Run Workflow](#Run-Workflow)
     - [The End](#The-End)
 - [Continue Learning About React](#Continue-Learning-About-React)
 
@@ -131,8 +138,7 @@
 **Description**: Now we will enter the Lambda function code that will allow us to activate our Lambda function (whenever a file is uploaded into our S3 Bucket).
 
 1. To start out, go back to the Lambda Function we have already created and in the **code** section paste the code found in the file named, **index.js** in the **Lambda** Folder, to your **index.js** file in your Lambda function. Make sure your files name is **index.js**.
-2. 
-
+2. You'll notice in the code that we have two variables with empty strings (snsClient & snsTopicArn). This is because we haven't created our SNS Topic/Subscription yet, which will allow us to send a custom email once the Lambda function runs. We will include the last piece of code to our Lambda function in the **Add SNS ARN to Lambda Function** section.
 
 ## SNS Creation
 **Description**: Now we will create an SNS topic name that will allow us to send a custom email that will let us know that a file was recently uploaded in our S3 bucket.
@@ -143,10 +149,21 @@
 4. Lastly, once you've created a subscription for your SNS Topic, you will receive an email on the email you selected in the subscription, asking yout to confirm the subscription. Make sure you confirm.
 
 ## Add SNS ARN to Lambda Function
-**Description**: 
+**Description**: We will now add the SNS ARN information we were missing before to our Lambda function to complete our workflow.
+
+1. Go back to your Lambda Function you have created in the AWS Platform. In your **index.js** code file, located the **snsClient** variable. In the empty string enter the **region** of your SNS. Then, locate the **snsTopicArn** variable and in the empty string enter your **SNS ARN** from the SNS we created.
+2. This last step completed our workflow. Let's make sure our workflow works in the next/last section.
+
+## Run Workflow
+**Description**: Let's now test our current workflow where we upload a file to our website --> that file is uploaded into our S3 Bucket --> at the same time the file is uploaded, an S3 Trigger in our Lambda Function is activated --> which sends an SNS notification via email telling us that a new file was uploaded into the S3 bucket.
+
+1. Go back to your webpage for your **index.html** file (from your code stack) where we upload an image. Select an image and click the **upload** button.
+2. Then, go to your S3 Bucket and check if that file you uploaded is in your S3 bucket now.
+3. If it is, go to your email application and check if you received an email notification saying that a file was uploaded into your S3 Bucket. Double check if the **Bucket Name and File Name** are the same.
+4. If everything is connected perfectly, you have successfully created a simple Node JS/AWS real-life scenario workflow.
     
 ## The End
-**Summary**: Congratulations on learning how to connect a **React** project to a backend, and learning how to use the **CRUD** method. We hope you left this meeting with a better understanding of React and how to use **MySQL** as a backend, along with **MySQL Workbench**. Feel free to look at the resources we've compiled below, which includes
+**Summary**: Congratulations on learning how to connect a **Node JS** project to a AWS S3 Bucket, with AWS Lambda & SNS, in one workflow. Read below for more AWS Resources.
 
 ---
 
