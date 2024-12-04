@@ -104,7 +104,19 @@
 **Description**: Now we will create an S3 bucket, which we will use to store any files we upload directly from our website. Although, you'll also be able to upload files directly via the AWS S3 platform. AWS S3 accepts many different file types.
 
 1. To create an S3 Bucket, first go to the AWS Platform and in the search bar search up **S3** and click the first option that shows up.
-2. 
+2. Next, click on the orange **Create Bucket** button. On the next screen, keep the default options you are given and just enter a Bucket name under the **Bucket Name** label.
+3. Finally, click the **Create Bucket** orange button. You have now created a S3 bucket. Feel free to explore your bucket.
+
+## AWS Info Input Into Our Code
+**Description**: Now that we have started out Node/Express server, created an IAM User role, and created an S3 Bucket, we will input our AWS Information into our code to connect the AWS platform to our backend server.
+
+1. Go back to your **code editor** and locate your **server.js** file. Then, locate the **accessKey, secretAccessKey, bucketRegion, and bucketName** variables in the file. The variables will be right after each other. Right now the variables are set to empty strings. Thus, enter your relevant information into each string as it is in the AWS Platform. This is the only additional code we will add.
+2. Now, let's test if we have completely connected AWS to our server. Make sure your server is running (node server.js). Go to your **index.html** file and **live preview** your frontend code (second click and select the **Open with Live Server** option. You may need to download the **Live Server** extension in Visual Studio Code if you haven't already. Then, you'll be redirected to a webpage with **AWS Demo: File Upload** as the title.
+3. Next, click the **Choose File** button and select a file you want to upload into your S3 Bucket. After you have selected a file, click the **Upload** button. Then, head over to your S3 Bucket that you've created and check if the file you have uploaded is there. If you've connected everything correctly, you should have a new file there.
+4. You have now successfully connected AWS with your S3 bucket and have made sure it works with your Codestack. Congrats!
+
+## ...
+**Description**: Now
 
     
 ## The End
